@@ -1,0 +1,39 @@
+<%- include('header.ejs') -%>
+<div id="main-content">
+  <h2>All Records</h2>
+  <table cellpadding="7px">
+    <thead>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Address</th>
+      <th>Class</th>
+      <th>Phone</th>
+      <th>Action</th>
+    </thead>
+    <tbody>
+      <% for(let i=0 ; i < userData.length ; i++){ %>
+      <tr>
+        <td><%= i+1 %></td>
+        <td><%= userData[i].name %></td>
+        <td><%= userData[i].location %></td>
+        <td>B.Sc</td>
+        <td><%= userData[i].contact %></td>
+        <!-- <td>sid</td>
+            <td>sname</td>
+            <td>saddress</td>
+            <td>cname</td>
+            <td>sphone</td> -->
+        <td>
+          <a href='#'>Edit</a>
+          <a href='#'>Delete</a>
+        </td>
+      </tr>
+      <% } %>
+    </tbody>
+  </table>
+</div>
+</div>
+<!-- <script>location.reload(true);</script> -->
+</body>
+
+</html>
